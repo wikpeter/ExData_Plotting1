@@ -8,8 +8,7 @@ data <- read.table("./data/household_power_consumption.txt",sep=";",dec=".",skip
 header <- read.table("./data/household_power_consumption.txt", nrows = 1, header = FALSE, sep =';', stringsAsFactors = FALSE)
 colnames(data) <- unlist(header)
 
-##setAs("character","myDate", function(from) as.Date(from, format="%d/%m/%Y") )
-##setAs("character","myTime", function(from) as.Date(from, format="%d/%m/%Y") )
+
 
 png(file="plot1.png")
 hist(data$Global_active_power, col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)")
